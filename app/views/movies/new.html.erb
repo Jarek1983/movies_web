@@ -1,40 +1,7 @@
+<div>
+  <h3>Add new film</h3>
+</div>
 
-<h3>Add new film</h3>
+  <%= render 'form' %>
 
- <%= form_for @movie do |f| %>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
-    <p>
-      <%= f.label :premiere_date %><br>
-      <%= f.date_field :premiere_date %>
-    </p>
-    <p>
-      <%= f.label :length %><br>
-      <%= f.number_field :length %>
-    </p>
-    <p>
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
-    </p>
-    <p>
-      <%= f.label :genre %><br>
-      <%= f.text_field :genre %>
-    </p>
-    <p>
-      <%= f.label :director %><br>
-      <%= f.text_field :director %>
-    </p>
-    <p>
-      <%= f.label :scenarist %><br>
-      <%= f.text_field :scenarist %>
-    </p>
-    <p>
-      <%= f.label :country %><br>
-      <%= f.text_field :country %>
-    </p>
-    <p>
-      <%= f.submit%>
-    </p>
-  <% end %>
+  <%= link_to "Back", movies_path %>
