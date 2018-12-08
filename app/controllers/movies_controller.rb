@@ -9,7 +9,12 @@ class MoviesController < ApplicationController
   end
 
   def create
-
+    @movie = Movie.new(movie_params)
+      if @movie.save
+        redirect_to movie_path(@movie)
+      else
+        render 'new'
+      end
   end
 
   def show
@@ -26,6 +31,12 @@ class MoviesController < ApplicationController
 
   def destroy
 
+  end
+
+private
+
+  def movie_params
+    params.require(:movie).permit(:name, :premiere_date,:length, :description, :genre, :director, :scenarist, :country)
   end
 
 end
