@@ -1,0 +1,32 @@
+<% if @comment %>
+<%= render 'common/errors', model: @comment %>
+<% end %> 
+
+<%= form_for [@movie, @comment || Comment.new(movie_id: @movie.id)] do |f| %>
+  <p>
+    <%= f.label :commenter %>
+    <%= f.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.label :rating %>
+    <%= f.radio_button :rating, 1 %> 1
+    <%= f.radio_button :rating, 2 %> 2
+    <%= f.radio_button :rating, 3 %> 3
+    <%= f.radio_button :rating, 4 %> 4
+    <%= f.radio_button :rating, 5 %> 5
+    <%= f.radio_button :rating, 6 %> 6
+    <%= f.radio_button :rating, 7 %> 7
+    <%= f.radio_button :rating, 8 %> 8
+    <%= f.radio_button :rating, 9 %> 9
+    <%= f.radio_button :rating, 10 %> 10
+  </p>
+
+  <p>
+    <%= f.submit %>
+    <% end %>

@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
-before_action :find_movie, only: [:create, :destroy]
+ before_action :find_movie
 
   def create
-    # @movie = Movie.find(params[:film_id])
+    # @movie = Movie.find(params[:movie_id])
     @comment = Comment.new(movie_id: @movie.id)
     @comment.attributes = comment_params
 
@@ -14,10 +14,10 @@ before_action :find_movie, only: [:create, :destroy]
   end
 
   def destroy
-    # comment = Comment.find(params[:id])
-    comment.destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
 
-    redirect_to movie_path(comment.film)
+    redirect_to movie_path(params[:movie_id])
   end
 
   private
@@ -27,7 +27,7 @@ before_action :find_movie, only: [:create, :destroy]
   end
 
   def find_movie
-    @movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:movie_id])
   end
 
 end
