@@ -1,53 +1,58 @@
-<div>
+<div class="row">
+  <div class="col"> </div>
+    <div class="col-md-10">
 
-  <h3>Look film</h3>
-    <p>
-      <strong>Title:</strong>
-        <%= @movie.name %>
-    </p>
-    <p>
-      <strong>Date:</strong>
-        <%= @movie.premiere_date.strftime("%d.%m.%Y") %>
-    </p>
-    <p>
-      <strong>Length:</strong>
-        <%= @movie.length %> minutes
-    </p>
-    <p>
-      <strong>Description</strong>
-        <%= @movie.description %>
-    </p>
-    <p>
-      <strong>Genre:</strong>
-        <%= @movie.genre %>
-    </p>
-    <p>
-      <strong>Director:</strong>
-        <%= @movie.director %>
-    </p>
-    <p>
-      <strong>Scenarist:</strong>
-        <%= @movie.scenarist %>
-    </p>
-    <p>
-      <strong>Country:</strong>
-        <%= @movie.country %>
-    </p>
-    <p>
-      <strong>Created at:</strong>
-        <%= @movie.created_at %>
-    </p>
-    <p>
-      <strong>Updated at:</strong>
-        <%= @movie.updated_at %>
-    </p>
+        <p>
+          <strong>Title:</strong>
+            <%= @movie.name %>
+        </p>
+        <p>
+          <strong>Date:</strong>
+            <%= @movie.premiere_date.strftime("%d.%m.%Y") %>
+        </p>
+        <p>
+          <strong>Length:</strong>
+            <%= @movie.length %> minutes
+        </p>
+        <p>
+          <strong>Description</strong>
+            <%= @movie.description %>
+        </p>
+        <p>
+          <strong>Genre:</strong>
+            <%= @movie.genre %>
+        </p>
+        <p>
+          <strong>Director:</strong>
+            <%= @movie.director %>
+        </p>
+        <p>
+          <strong>Scenarist:</strong>
+            <%= @movie.scenarist %>
+        </p>
+        <p>
+          <strong>Country:</strong>
+            <%= @movie.country %>
+        </p>
+        <p>
+          <strong>Created at:</strong>
+            <%= @movie.created_at %>
+        </p>
+        <p>
+          <strong>Updated at:</strong>
+            <%= @movie.updated_at %>
+        </p>
 
-<h2>Add comment</h2>
-<%= render 'comments/form' %>
+    <div class="field" style="100%;">
+  
+      <h3>Add comment</h3>
+        <%= render 'comments/form' %>
 
-<h2>Comments</h2>
-<%= render @movie.comments.order(created_at: :desc) %> <br>
+      <h3>Comments</h3>
+        <%= render @movie.comments.order(created_at: :desc) %> <br>
 
-<%= link_to 'Back', movies_path  %>
-
+        <%= link_to 'Back', movies_path, class: 'btn btn-md btn-info' %>
+    </div>
+  </div>
+  <div class="col"> </div>
 </div>

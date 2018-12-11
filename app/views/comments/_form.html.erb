@@ -5,12 +5,12 @@
 <%= form_for [@movie, @comment || Comment.new(movie_id: @movie.id)] do |f| %>
   <p>
     <%= f.label :commenter %>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, class: 'form-control' %>
   </p>
 
   <p>
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'form-control' %>
   </p>
 
   <p>
@@ -28,5 +28,5 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-lg btn-success' %>
     <% end %>
