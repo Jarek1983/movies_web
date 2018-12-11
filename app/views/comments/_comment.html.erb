@@ -15,8 +15,9 @@
 <p>
 <strong> Created at: </strong>
   <%= comment.created_at %>
-
-<%= link_to 'Home', movies_path  %>
+<p>
 <%= link_to "Delete", movie_comment_path(@movie, comment),
+					  class: 'btn btn-md btn-danger',
                       method: :delete,
                       data: { confirm: "Are you sure?"}%>
+</p>
