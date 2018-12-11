@@ -1,40 +1,46 @@
-<div>
-  <%= link_to "Add new movie", new_movie_path %>
-</div>
+<div class="row">
+  <div class="col"> </div>
+    <div class="col-md-10">
 
-<div>
-  <h2>List of films: </h2>
+      <h2>List of movies: </h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Premiere date</th>
-      <th>Length</th>
-      <th>Description</th>
-      <th>Genre</th>
-      <th>Director</th>
-      <th>Scenarist</th>
-      <th>Country</th>
-      <th colspan="3">Editing Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @movies.each do |movie| %>
-    <tr>
-      <td><%= movie.name %></td>
-      <td><%= movie.premiere_date.strftime("%d.%m.%Y")%></td>
-      <td><%= movie.length %> min.</td>
-      <td><%= movie.description %></td>
-      <td><%= movie.genre %></td>
-      <td><%= movie.director %></td>
-      <td><%= movie.scenarist %></td>
-      <td><%= movie.country %></td>
-      <td><%= link_to 'Show', movie_path(movie) %></td>
-      <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-      <td><%= link_to 'Delete', movie_path(movie), method: :delete, data: {confirm: "Are you sure?"} %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+    <p>
+      <%= link_to "Add new movie", new_movie_path, class: 'btn btn-lg btn-info' %>
+    </p>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Premiere</th>
+          <th>Length</th>
+          <th>Description</th>
+          <th>Genre</th>
+          <th>Director</th>
+          <th>Scenarist</th>
+          <th>Country</th>
+          <th colspan="3">Editing Options</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.name %></td>
+          <td><%= movie.premiere_date.strftime("%d.%m.%Y")%></td>
+          <td><%= movie.length %> min.</td>
+          <td><%= truncate(movie.description, length: 50) %></td>
+          <td><%= movie.genre %></td>
+          <td><%= movie.director %></td>
+          <td><%= movie.scenarist %></td>
+          <td><%= movie.country %></td>
+          <td><%= link_to 'Show', movie_path(movie), class: 'btn btn-sm btn-info'%></td>
+          <td><%= link_to 'Edit', edit_movie_path(movie), class: 'btn btn-sm btn-warning' %></td>
+          <td><%= link_to 'Delete', movie_path(movie), class: 'btn btn-sm btn-danger', method: :delete, data: {confirm: "Are you sure?"} %></td>
+        </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+    </div>
+  <div class="col"> </div>
 </div>
