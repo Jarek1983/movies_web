@@ -44,6 +44,14 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+   def search
+    if params[:search].blank?
+      @movies = Movie.all.order(:name)
+    else
+      @movies = Movie.search(params)
+    end
+  end
+
 private
 
   def movie_params
