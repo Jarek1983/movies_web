@@ -1,28 +1,21 @@
  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-
-         <li class="nav-item">
             <a class="nav-link" href="#">Sign in</a>
           </li>
-        <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="#">Create account</a>
           </li>
-            
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
         </ul> 
         <div class="form-inline mt-2 mt-md-0">
         <%= form_tag search_movies_path, method: :get do %>
@@ -30,6 +23,5 @@
         <%= submit_tag "Search", class: "btn btn-light my-2 my-sm-0" %>
         <% end %>
         </div>
-
       </div>
 </nav>

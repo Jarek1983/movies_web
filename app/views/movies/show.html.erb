@@ -49,6 +49,7 @@
         <%= render 'comments/form' %>
 
       <h3>Comments</h3>
+      
         <%= render @movie.comments.order(created_at: :desc) %>
 
         <%= link_to 'Back', movies_path, class: 'btn btn-md btn-info' %>

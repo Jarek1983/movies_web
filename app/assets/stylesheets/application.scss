@@ -14,6 +14,7 @@
  */
 
 @import "bootstrap";
+@import "footer";
 
 thead {
     background-color: #dddddd;
@@ -22,4 +23,8 @@ thead {
 .form-control {
 	background-color: #efeeef;
 	border: 2px solid #eeccdd;
+}
+
+.main {
+	background-color: #708090;
 }
