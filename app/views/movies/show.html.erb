@@ -44,11 +44,21 @@
         </p>
 
     <div class="field" style="100%;">
-  
-      <h3>Add comment</h3>
+      
+      <h4>Add comment</h4>
+
+        <% if current_user %>
+        
         <%= render 'comments/form' %>
 
-      <h3>Comments</h3>
+        <% else %>
+
+          <%= link_to 'Sign In', new_session_path %> or 
+          <%= link_to 'Sign Up', new_user_path %> to created a comment.
+
+        <% end %>
+
+      <h4>Comments</h4>
       
         <%= render @movie.comments.order(created_at: :desc) %>
 

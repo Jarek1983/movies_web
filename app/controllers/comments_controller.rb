@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
  before_action :find_movie
+ before_action :authorize, only: [:create] 
 
   def create
     # @movie = Movie.find(params[:movie_id])
@@ -7,9 +8,11 @@ class CommentsController < ApplicationController
     @comment.attributes = comment_params
 
     if @comment.save
-      redirect_to movie_path(@movie)
+      redirect_to movie_path(@movie), notice:
+      "You created comment"
     else
-      render "movies/show"
+      render "movies/show", alert:
+      "You don't created comment"
     end
   end
 

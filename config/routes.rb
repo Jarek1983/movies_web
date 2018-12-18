@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sessions
   resources :users
   root 'movies#index'
   resources :movies do

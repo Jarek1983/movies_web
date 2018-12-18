@@ -8,15 +8,33 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign in</a>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Create account', new_user_path %>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-        </ul> 
+           <% if current_user %>
+
+          <li class="nav-item">
+            <%= link_to 'Sign Out', session_path('active'), method: :delete %>
+          </li>
+  
+            <% elsif current_user %>
+
+          <li class="nav-item">
+              <%= link_to 'Sign Out', session_path('active'), method: :delete %>
+          </li>
+
+            <% else %>
+
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_session_path %>
+          </li>
+
+          <li class="nav-item">
+              <%= link_to 'Create Account', new_user_path %>
+          </li>
+          
+            <% end %>
+        </ul>
+
         <div class="form-inline mt-2 mt-md-0">
         <%= form_tag search_movies_path, method: :get do %>
         <%= text_field_tag :search, nil, placeholder: "Search", class: "form-control mr-sm-2" %>
