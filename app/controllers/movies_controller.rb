@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
     before_action :find_movie, only: [:show, :edit, :update, :destroy]
+    before_action :admin_authorize, except: [:index, :show, :search]
+
   def index
     @movies = Movie.all.order(:name)
   end

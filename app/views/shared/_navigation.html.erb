@@ -10,18 +10,18 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-           <% if current_user %>
+            <% if current_user && current_user.admin? %>
 
           <li class="nav-item">
             <%= link_to 'Sign Out', session_path('active'), method: :delete %>
           </li>
-  
+
             <% elsif current_user %>
 
           <li class="nav-item">
-              <%= link_to 'Sign Out', session_path('active'), method: :delete %>
+            <%= link_to 'Sign Out', session_path('active'), method: :delete %>
           </li>
-
+            
             <% else %>
 
           <li class="nav-item">

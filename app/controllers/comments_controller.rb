@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
  before_action :find_movie
  before_action :authorize, only: [:create] 
+ before_action :admin_authorize, only: [:destroy] 
 
   def create
     # @movie = Movie.find(params[:movie_id])

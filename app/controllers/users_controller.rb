@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 		if @user.save
 			session[:user_id] = @user.id
 			redirect_to movies_path, 
-			notice: "Welcome #{@user.userid}! You successfully created an account." 
+			flash[:notice] = "Welcome #{@user.userid}! You successfully created an account." 
 		else
 			render 'new'
 		end
