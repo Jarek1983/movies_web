@@ -60,7 +60,7 @@
 
       <h4>Comments</h4>
       
-        <%= render @movie.comments.order(created_at: :desc) %>
+        <%= render @movie.comments.order(created_at: :desc) %><br>
 
         <%= link_to 'Back', movies_path, class: 'btn btn-md btn-info' %>
     </div>
