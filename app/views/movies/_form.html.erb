@@ -35,6 +35,7 @@
         <%= f.label :country %><br>
         <%= f.text_field :country, class: 'form-control' %>
       </p>
+        <%= f.hidden_field :user_id, value: session[:user_id] %>
       <p>
         <%= f.submit class: 'btn btn-lg btn-success'%>
       </p>

@@ -10,6 +10,7 @@ class Movie < ApplicationRecord
   validates :country, presence: true, length: {minimum: 3}
 
     has_many :comments, dependent: :destroy
+    belongs_to :user
   # has_many :comments, through: :comments_movies,
             # dependent: :destroy
   # has_many :comments_movies
