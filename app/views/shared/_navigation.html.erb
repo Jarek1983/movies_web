@@ -5,10 +5,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <%= link_to 'Movies', movies_path %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <%= link_to 'Cinema', movies_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Actors', movies_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Serials', movies_path %>
           </li>
             <% if current_user && current_user.admin? %>
 

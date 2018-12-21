@@ -53,7 +53,8 @@
           <td><%= movie.genre %></td>
           <td><%= movie.director %></td>
           <td><%= movie.scenarist %></td>
-          <td><%= movie.country %></td>
+         <td><%= movie.country %></td> 
+
           <td><%= link_to 'Show', movie_path(movie), class: 'btn btn-sm btn-info'%></td>
 
           <% if current_user && current_user.admin? %>

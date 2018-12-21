@@ -1,6 +1,6 @@
-<div class="row" style="padding-top: 0%;">
+<div class="row" style="padding-top: 5%;">
 	<div class="col-md-4">
-<h1>Create account! </h1>
+<h3>Create account! </h3>
 <%= form_for @user do |f| %>
 <div class="field" style="100%;">
 <% if @user.errors.any? %>
@@ -20,14 +20,14 @@
 			</p>
 	</div>
 	<% end %>
-	<%= f.text_field :userid, placeholder: 'Input a User ID', class: 'form-control' %><br>
-	<%= f.email_field :email, placeholder: 'Input your email', class: 'form-control' %><br>
+	<%= f.text_field :userid, placeholder: 'Input a User ID', class: 'form-control'%><br>
+	<%= f.email_field :email, placeholder: 'Input your email', class: 'form-control'%><br>
 	<%= f.password_field :password, placeholder: 'Create a password', class: 'form-control' %><br>
 	<%= f.password_field :password_confirmation, placeholder: 'Confirm password', class: 'form-control' %><br>
-	<%= f.submit 'Create Account' %>
+	<p class="login"><%= f.submit 'Create Account', class: 'btn btn-md btn-success' %></p>
 	<% end %>
 </div>
-		<p>
+		<p class="login">
 			<%= link_to 'Movies', movies_path, class: 'btn btn-md btn-info' %>
 			<%= link_to 'Home', root_path, class: 'btn btn-md btn-primary' %>
 		</p>

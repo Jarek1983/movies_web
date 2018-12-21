@@ -7,8 +7,8 @@ class Movie < ApplicationRecord
   validates :genre, length: {minimum: 5}
   validates :director, presence: true
   validates :scenarist, presence: true
-  validates :country, presence: true, length: {minimum: 3}
-
+  validates :country, presence: true
+  
     has_many :comments, dependent: :destroy
     belongs_to :user
   # has_many :comments, through: :comments_movies,
