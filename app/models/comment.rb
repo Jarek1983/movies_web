@@ -4,5 +4,6 @@ class Comment < ApplicationRecord
   validates :rating, presence: true
 
   belongs_to :movie
-  # has_many :comments, through: :comments_movies
+  belongs_to :user
+
 end

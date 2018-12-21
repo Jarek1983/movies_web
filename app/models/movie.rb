@@ -11,9 +11,7 @@ class Movie < ApplicationRecord
   
     has_many :comments, dependent: :destroy
     belongs_to :user
-  # has_many :comments, through: :comments_movies,
-            # dependent: :destroy
-  # has_many :comments_movies
+    # has_many :actors
 
   def self.search(params)
 		movies = Movie.where("description LIKE ? or name LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?

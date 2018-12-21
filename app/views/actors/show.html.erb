@@ -1,0 +1,43 @@
+<div class="row" style="padding-top: 30px;">
+  <div class="col"> </div>
+    <div class="col-md-10">
+
+        <p>
+          <strong>Name:</strong>
+            <%= @actor.name %>
+        </p>
+        <p>
+          <strong>Surname:</strong>
+            <%= @actor.surname %>
+        </p>
+          <p>
+          <strong>Date:</strong>
+            <%= @actor.birthday %>
+        </p>
+        <p>
+          <strong>Description:</strong>
+            <%= @actor.description %>
+        </p>
+        <p>
+        <p>
+          <strong>Country:</strong>
+            <%= @actor.country %>
+        </p>
+         <p>
+          <strong>Movies:</strong>
+            <%= @actor.movies %>
+        </p>
+        <p>
+          <strong>Created at:</strong>
+            <%= @actor.created_at %>
+        </p>
+        <p>
+          <strong>Updated at:</strong>
+            <%= @actor.updated_at %>
+        </p>
+
+        <%= link_to 'Back', actors_path, class: 'btn btn-md btn-info' %>
+    </div>
+  </div>
+  <div class="col"> </div>
+</div>

@@ -4,4 +4,6 @@ class User < ApplicationRecord
     :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
     has_many :movies, foreign_key: :user_id
+    has_many :actors, foreign_key: :user_id
+    has_many :comments, foreign_key: :user_id
 end
