@@ -49,7 +49,7 @@ class ActorsController < ApplicationController
 private
 
   def actor_params
-    params.require(:actor).permit(:name, :surname, :birthday, :description, :country, :movies, :user_id)
+    params.require(:actor).permit(:name, :surname, :birthday, :description, :country, :movies, :user_id, :photo)
   end
 
   def find_actor

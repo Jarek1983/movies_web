@@ -1,6 +1,6 @@
 <%= render 'common/errors', model: @movie %>
 
-  <%= form_for @movie do |f| %>
+  <%= form_for @movie, html: {multipart: true} do |f| %>
 
     <div class="field" style="100%;">
       <p>
@@ -37,6 +37,10 @@
       </p>
         <%= f.hidden_field :user_id, value: session[:user_id] %>
       <p>
+        <p>
+        <%= f.label :movie %><br>
+        <%= f.file_field :movie, class: 'form-control' %>
+  </p>
         <%= f.submit class: 'btn btn-lg btn-success'%>
       </p>
 

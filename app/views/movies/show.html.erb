@@ -1,8 +1,6 @@
 <div class="row" style="padding-top: 30px;">
   <div class="col"> </div>
     <div class="col-md-10">
-
-        <p>
           <strong>Title:</strong>
             <%= @movie.name %>
         </p>
@@ -34,6 +32,12 @@
           <strong>Country:</strong>
             <%= @movie.country %>
         </p>
+        <p>
+          <% if @movie.movie.present? %>
+            <%= video_tag(@movie.movie, controls: true, type: 'video/mp4', style: "width:25%") %>
+          <% end %>
+        </p>
+
         <p>
           <strong>Created at:</strong>
             <%= @movie.created_at %>

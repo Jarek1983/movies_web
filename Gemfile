@@ -35,6 +35,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'paperclip', '~> 6.1'
+gem 'aws-sdk-s3', '~> 1.30'
+gem 'paperclip-av-transcoder', '~> 0.6.4'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

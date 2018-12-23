@@ -2,6 +2,10 @@
   <div class="col"> </div>
     <div class="col-md-10">
 
+        <% if @actor.photo.present? %>
+          <%= image_tag(@actor.photo.url, style: "width:50%;") %>
+        <% end %> 
+
         <p>
           <strong>Name:</strong>
             <%= @actor.name %>

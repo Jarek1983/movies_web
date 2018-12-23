@@ -13,6 +13,13 @@ class Movie < ApplicationRecord
     belongs_to :user
     # has_many :actors
 
+    has_attached_file :movie, :style =>
+      {
+        :medium => {:geometry => "100x50", :format => 'mp4'},
+        :thumb => {:geometry => "50x50", :format => 'jpg', :time => 10} 
+      }, :processor => [:transcoder]
+  validates_attachment_content_type :movie, content_type: /\Avideo\/.*\z/
+
   def self.search(params)
 		movies = Movie.where("description LIKE ? or name LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
 		movies	

@@ -9,6 +9,8 @@ class Actor < ApplicationRecord
     belongs_to :user
     # belongs_to :movie
 
+  has_attached_file :photo, style: {large: "450x450", thumb: "50x50#"}
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   def self.search(params)
 		actors = Actor.where("name LIKE ? or surname LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
