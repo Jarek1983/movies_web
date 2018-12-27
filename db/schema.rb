@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_23_113422) do
+ActiveRecord::Schema.define(version: 2018_12_27_214112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,6 @@ ActiveRecord::Schema.define(version: 2018_12_23_113422) do
     t.index ["user_id"], name: "index_actors_on_user_id"
   end
 
-  create_table "actors_movies", id: false, force: :cascade do |t|
-    t.bigint "movie_id", null: false
-    t.bigint "actor_id", null: false
-    t.index ["actor_id", "movie_id"], name: "index_actors_movies_on_actor_id_and_movie_id"
-    t.index ["movie_id", "actor_id"], name: "index_actors_movies_on_movie_id_and_actor_id"
-  end
-
   create_table "comments", force: :cascade do |t|
     t.string "commenter", null: false
     t.text "body", null: false
@@ -49,6 +42,19 @@ ActiveRecord::Schema.define(version: 2018_12_23_113422) do
     t.bigint "user_id"
     t.index ["movie_id"], name: "index_comments_on_movie_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres_movies", id: false, force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "movie_id", null: false
+    t.index ["genre_id", "movie_id"], name: "index_genres_movies_on_genre_id_and_movie_id"
+    t.index ["movie_id", "genre_id"], name: "index_genres_movies_on_movie_id_and_genre_id"
   end
 
   create_table "movies", force: :cascade do |t|

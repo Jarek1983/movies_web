@@ -17,8 +17,10 @@
             <%= @movie.description %>
         </p>
         <p>
-          <strong>Genre:</strong>
-            <%= @movie.genre %>
+          <strong>Genres</strong>
+            <% @movie.genres.each do |genre| %>
+            <%= link_to genre.name, genre_path(genre) %>
+            <% end %> 
         </p>
         <p>
           <strong>Director:</strong>

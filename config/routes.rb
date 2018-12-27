@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :actors
   resources :sessions
   resources :users
+  resources :genres
   root 'movies#index'
   resources :movies do
   	resources :comments

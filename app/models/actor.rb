@@ -6,8 +6,7 @@ class Actor < ApplicationRecord
   validates :country, presence: true
   validates :movies, presence: true
   
-    belongs_to :user
-    # belongs_to :movie
+  belongs_to :user
 
   has_attached_file :photo, style: {large: "450x450", thumb: "50x50#"}
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/

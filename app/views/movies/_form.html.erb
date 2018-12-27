@@ -20,9 +20,9 @@
         <%= f.text_area :description, class: 'form-control' %>
       </p>
       <p>
-        <%= f.label :genre %><br>
-        <%= f.text_field :genre, class: 'form-control' %>
-      </p>
+        <div class="form-group">
+    <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+      </div>
       <p>
         <%= f.label :director %><br>
         <%= f.text_field :director, class: 'form-control' %>
