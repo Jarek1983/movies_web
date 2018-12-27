@@ -38,14 +38,6 @@ class ActorsController < ApplicationController
     redirect_to actors_path
   end
 
-   def search
-    if params[:search].blank?
-      @actors = Actor.all.order(:surname)
-    else
-      @actors = Actor.search(params)
-    end
-  end
-
 private
 
   def actor_params

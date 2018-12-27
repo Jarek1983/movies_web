@@ -44,7 +44,7 @@
         <tr>
           <td><%= actor.name %></td>
           <td><%= actor.surname %></td>
-          <td><%= actor.birthday%></td>
+          <td><%= actor.birthday.strftime("%d.%m.%Y")%></td>
           <td><%= truncate(actor.description, length: 25) %></td>
           <td><%= actor.country %></td> 
           <td><%= actor.movies %></td>

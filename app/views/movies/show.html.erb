@@ -32,7 +32,6 @@
           <strong>Country:</strong>
             <%= @movie.country %>
         </p>
-        <p>
           <% if @movie.movie.present? %>
             <%= video_tag(@movie.movie, controls: true, type: 'video/mp4', style: "width:25%") %>
           <% end %>

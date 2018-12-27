@@ -21,8 +21,9 @@
       </p>
       <p>
         <%= f.label :country %><br>
-        <%= f.text_field :country, class: 'form-control' %>
+        <%= f.select :country, options_for_select(['Polska', 'Argentyna','Czechy', 'USA', 'Wielka Brytania', 'Francja', 'Niemcy']) %>
       </p>
+      
       <p>
         <%= f.label :movies %><br>
         <%= f.text_field :movies, class: 'form-control' %>
