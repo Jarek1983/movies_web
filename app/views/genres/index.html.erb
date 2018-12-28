@@ -14,7 +14,7 @@
 
           <table class="table table-hover">
             <thead>
-              <tr>
+              <tr class="table-active>
                 <% if current_user && current_user.admin? %>
 
                   <th>Name</th>
@@ -32,7 +32,7 @@
             <tbody>
 
               <% @genres.each do |genre| %>
-                <tr>
+                <tr class="table-secondary">
                       <td><%= genre.name %></td>
                       <td><%= link_to 'Show', genre, class: 'btn btn-md btn-info' %></td>
 

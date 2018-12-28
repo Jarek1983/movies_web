@@ -14,7 +14,7 @@
 
     <table class="table table-hover">
       <thead>
-        <tr>
+        <tr class="table-success">
         <% if current_user && current_user.admin? %>
 
           <th>Name</th>
@@ -37,7 +37,7 @@
       </thead>
       <tbody>
           <% @actors.each do |actor| %>
-        <tr>
+        <tr class="table-info">
           <td><%= actor.name %></td>
           <td><%= actor.birthday.strftime("%d.%m.%Y")%></td>
           <td><%= truncate(actor.description, length: 25) %></td>

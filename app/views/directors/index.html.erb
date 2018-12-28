@@ -13,7 +13,7 @@
 
         <table class="table table-hover">
           <thead>
-            <tr>
+            <tr class="table-light>
               <% if current_user && current_user.admin? %>
                 <th>Name</th>
                 <th colspan="3"></th>
@@ -31,7 +31,7 @@
 
             <% @directors.each do |director| %>
 
-              <tr>
+              <tr class="table-dark text-dark">
                   <td><%= director.name %></td>
                   <td><%= link_to 'Show', director, class: 'btn btn-md btn-info' %></td>
 
