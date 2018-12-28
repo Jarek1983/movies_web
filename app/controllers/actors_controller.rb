@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
     before_action :admin_authorize, except: [:index, :show, :search]
 
   def index
-  	@actors = Actor.all.order(:surname)
+  	@actors = Actor.all.order(:name)
   end
 
   def new
@@ -41,7 +41,7 @@ class ActorsController < ApplicationController
 private
 
   def actor_params
-    params.require(:actor).permit(:name, :surname, :birthday, :description, :country, :movies, :user_id, :photo)
+    params.require(:actor).permit(:name, :birthday, :description, :country, :user_id, :photo)
   end
 
   def find_actor

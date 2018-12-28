@@ -13,6 +13,8 @@ class Movie < ApplicationRecord
     has_many :genres, through: :genres_movies
     has_many :directors_movies
     has_many :directors, through: :directors_movies
+    has_many :actors_movies
+    has_many :actors, through: :actors_movies
 
     has_attached_file :movie, style:
       {

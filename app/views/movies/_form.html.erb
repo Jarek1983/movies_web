@@ -31,6 +31,10 @@
         <%= f.text_field :scenarist, class: 'form-control' %>
       </p>
       <p>
+        <%= f.label :actor %><br>
+        <%= f.collection_check_boxes :actor_ids, Actor.all, :id, :name %>  
+      </p>
+      <p>
         <%= f.label :country %><br>
         <%= f.select :country, options_for_select(['Polska', 'Argentyna', 'Czechy', 'USA', 'Wielka Brytania', 'Francja', 'Niemcy']) %>
       </p>

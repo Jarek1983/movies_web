@@ -8,10 +8,6 @@
         <%= f.text_field :name, class: 'form-control' %>
       </p>
       <p>
-        <%= f.label :surname %><br>
-        <%= f.text_field :surname, class: 'form-control' %>
-      </p>
-      <p>
         <%= f.label :birthday %><br>
         <%= f.date_field :birthday, class: 'form-control' %>
       </p>
@@ -24,10 +20,6 @@
         <%= f.select :country, options_for_select(['Polska', 'Argentyna','Czechy', 'USA', 'Wielka Brytania', 'Francja', 'Niemcy']) %>
       </p>
       
-      <p>
-        <%= f.label :movies %><br>
-        <%= f.text_field :movies, class: 'form-control' %>
-      </p>
         <%= f.hidden_field :user_id, value: session[:user_id] %>
       <p>
       <p>

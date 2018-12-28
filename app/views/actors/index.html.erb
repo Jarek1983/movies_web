@@ -18,21 +18,17 @@
         <% if current_user && current_user.admin? %>
 
           <th>Name</th>
-          <th>Surname</th>
           <th>Birthday</th>
           <th>Description</th>
           <th>Country</th>
-          <th>Movies</th>
           <th colspan="3">Editing Options</th>
 
         <% else %>
 
           <th>Name</th>
-          <th>Surname</th>
           <th>Birthday</th>
           <th>Description</th>
           <th>Country</th>
-          <th>Movies</th>
           <th colspan="1">Show</th>
 
         <% end %>
@@ -43,11 +39,9 @@
           <% @actors.each do |actor| %>
         <tr>
           <td><%= actor.name %></td>
-          <td><%= actor.surname %></td>
           <td><%= actor.birthday.strftime("%d.%m.%Y")%></td>
           <td><%= truncate(actor.description, length: 25) %></td>
           <td><%= actor.country %></td> 
-          <td><%= actor.movies %></td>
 
           <td><%= link_to 'Show', actor_path(actor), class: 'btn btn-sm btn-info'%></td>
 
