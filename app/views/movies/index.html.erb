@@ -50,7 +50,11 @@
           <td><%= movie.premiere_date.strftime("%d.%m.%Y")%></td>
           <td><%= movie.length %></td>
           <td><%= truncate(movie.description, length: 25) %></td>
-          <td><%= movie.genre_ids %></td>
+          <td>
+            <% movie.genres.each do |g| %>
+              <%= g.name %>
+            <% end %>
+          </td>
           <td><%= movie.director %></td>
           <td><%= movie.scenarist %></td>
           <td><%= movie.country %></td> 
