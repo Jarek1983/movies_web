@@ -1,2 +1,16 @@
-<h1>Directors#show</h1>
-<p>Find me in app/views/directors/show.html.erb</p>
+<div class="row" style="padding-top: 30px;">
+  <div class="col"> </div>
+    <div class="col-md-10">
+
+<p>
+  <strong>Name:</strong>
+  <%= @director.name %>
+</p>
+
+<%= link_to 'Edit', edit_director_path(@director) %> |
+<%= link_to 'Back', directors_path %>
+<%= link_to 'Destroy', @director, method: :delete, data: { confirm: 'Are you sure?' } %>
+ 
+  </div>
+  <div class="col"> </div>
+</div>

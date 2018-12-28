@@ -20,12 +20,11 @@
         <%= f.text_area :description, class: 'form-control' %>
       </p>
       <p>
-        <div class="form-group">
-    <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
-      </div>
+        <%= f.label :genre %><br>
+        <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
       <p>
         <%= f.label :director %><br>
-        <%= f.text_field :director, class: 'form-control' %>
+        <%= f.collection_check_boxes :director_ids, Director.all, :id, :name %>  
       </p>
       <p>
         <%= f.label :scenarist %><br>
@@ -37,12 +36,12 @@
       </p>
         <%= f.hidden_field :user_id, value: session[:user_id] %>
       <p>
-        <p>
-        <%= f.label :movie %><br>
+      <p>
+        <%= f.label :trailer %><br>
         <%= f.file_field :movie, class: 'form-control' %>
-  </p>
+      </p>
+      <p>
         <%= f.submit class: 'btn btn-lg btn-success'%>
       </p>
-
     </div>
 <% end %>

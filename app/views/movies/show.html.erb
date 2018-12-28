@@ -23,8 +23,10 @@
             <% end %> 
         </p>
         <p>
-          <strong>Director:</strong>
-            <%= @movie.director %>
+          <strong>Directors</strong>
+            <% @movie.directors.each do |director| %>
+            <%= link_to director.name, director_path(director) %>
+            <% end %> 
         </p>
         <p>
           <strong>Scenarist:</strong>

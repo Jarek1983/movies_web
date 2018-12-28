@@ -55,7 +55,11 @@
               <%= g.name %>
             <% end %>
           </td>
-          <td><%= movie.director %></td>
+          <td>
+            <% movie.directors.each do |g| %>
+              <%= g.name %>
+            <% end %>
+          </td>
           <td><%= movie.scenarist %></td>
           <td><%= movie.country %></td> 
 

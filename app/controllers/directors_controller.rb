@@ -23,7 +23,7 @@ class DirectorsController < ApplicationController
 
   def update
     if @director.update(director_params)
-        redirect_to director_path(@gdirector)
+        redirect_to director_path(@director)
       else
         render 'edit'
       end
