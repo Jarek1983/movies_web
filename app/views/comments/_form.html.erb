@@ -1,5 +1,5 @@
 <% if @comment %>
-<%= render 'common/errors', model: @comment %>
+  <%= render 'common/errors', model: @comment %>
 <% end %> 
 
 <%= form_for [@movie, @comment || Comment.new(movie_id: @movie.id)] do |f| %>

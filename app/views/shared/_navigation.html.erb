@@ -2,22 +2,22 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <%= link_to 'Movies', movies_path %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Actors', actors_path %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Genres', genres_path %>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to 'Movies', movies_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Actors', actors_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Genres', genres_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Directors', directors_path %>
+        </li>
 
-          <li class="nav-item">
-            <%= link_to 'Directors', directors_path %>
-          </li>
-            <% if current_user && current_user.admin? %>
+          <% if current_user && current_user.admin? %>
 
           <li class="nav-item">
             <%= link_to 'Sign Out', session_path('active'), method: :delete %>
@@ -40,13 +40,15 @@
           </li>
           
             <% end %>
-        </ul>
+      </ul>
 
         <div class="form-inline mt-2 mt-md-0">
-        <%= form_tag search_movies_path, method: :get do %>
-        <%= text_field_tag :search, nil, placeholder: "Search", class: "form-control mr-sm-2" %>
-        <%= submit_tag "Search", class: "btn btn-light my-2 my-sm-0" %>
-        <% end %>
+          <%= form_tag search_movies_path, method: :get do %>
+          <%= text_field_tag :search, nil, placeholder: "Search", class: "form-control mr-sm-2" %>
+          <%= submit_tag "Search", class: "btn btn-light my-2 my-sm-0" %>
+
+          <% end %>
+
         </div>
-      </div>
+    </div>
 </nav>

@@ -1,17 +1,19 @@
 <div class="row" style="padding-top: 10%;">
 	<div class="col"></div>
-	<div class="col-md-4">
-	<h2>Please Sign In</h2>
-	<%= form_tag sessions_path do %>
-	<%= text_field_tag :userid, nil, placeholder: 'Input User Id' %><br>
-	<%= password_field_tag :password, nil, placeholder: 'Input Password' %>
-	<%= submit_tag 'Sign In' %>
-	<% end %>
+	  <div class="col-md-4">
+	    <h2>Please Sign In</h2>
+	      <%= form_tag sessions_path do %>
+	      <%= text_field_tag :userid, nil, placeholder: 'Input User Id' %><br>
+	      <%= password_field_tag :password, nil, placeholder: 'Input Password' %>
+	      <%= submit_tag 'Sign In' %>
+
+	      <% end %>
+
 		<p class="login">
 			<%= link_to 'Movies', movies_path, class: 'btn btn-md btn-info' %>
 			<%= link_to 'Home', root_path, class: 'btn btn-md btn-primary' %>
 		</p>
-	</div>
+	  </div>
 	<div class="col"></div>
 </div>
 

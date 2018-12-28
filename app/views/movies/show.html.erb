@@ -1,6 +1,7 @@
 <div class="row" style="padding-top: 30px;">
   <div class="col"> </div>
     <div class="col-md-10">
+        <p>
           <strong>Title:</strong>
             <%= @movie.name %>
         </p>
@@ -42,6 +43,7 @@
           <strong>Country:</strong>
             <%= @movie.country %>
         </p>
+        <p>
           <% if @movie.movie.present? %>
             <%= video_tag(@movie.movie, controls: true, type: 'video/mp4', style: "width:25%") %>
           <% end %>
@@ -56,27 +58,28 @@
             <%= @movie.updated_at %>
         </p>
 
-    <div class="field" style="100%;">
+      <div class="field" style="100%;">
       
-      <h4>Add comment</h4>
+        <h4>Add comment</h4>
 
-        <% if current_user %>
+          <% if current_user %>
         
-        <%= render 'comments/form' %>
+          <%= render 'comments/form' %>
 
-        <% else %>
+          <% else %>
 
-          <%= link_to 'Sign In', new_session_path %> or 
-          <%= link_to 'Sign Up', new_user_path %> to created a comment.
+            <%= link_to 'Sign In', new_session_path %> or 
+            <%= link_to 'Sign Up', new_user_path %> to created a comment.
 
-        <% end %>
+          <% end %>
 
-      <h4>Comments</h4>
+        <h4>Comments</h4>
       
-        <%= render @movie.comments.order(created_at: :desc) %><br>
+          <%= render @movie.comments.order(created_at: :desc) %><br>
 
-        <%= link_to 'Back', movies_path, class: 'btn btn-md btn-info' %>
+          <%= link_to 'Back', movies_path, class: 'btn btn-md btn-info' %>
+        
+      </div>
     </div>
-  </div>
   <div class="col"> </div>
 </div>

@@ -2,14 +2,19 @@
   <div class="col"> </div>
     <div class="col-md-10">
 
-<p>
-  <strong>Name:</strong>
-  <%= @director.name %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @director.name %>
+      </p>
+ 
+      <%= link_to 'Back', directors_path %>
 
-<%= link_to 'Edit', edit_director_path(@director) %> |
-<%= link_to 'Back', directors_path %>
-<%= link_to 'Destroy', @director, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if current_user && current_user.admin? %>
+
+      <%= link_to 'Edit', edit_director_path(@director) %>
+      <%= link_to 'Destroy', @director, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <% end %>
  
   </div>
   <div class="col"> </div>
