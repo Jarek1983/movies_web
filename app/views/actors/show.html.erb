@@ -32,7 +32,14 @@
             <%= @actor.updated_at %>
         </p>
 
-        <%= link_to 'Back', actors_path, class: 'btn btn-md btn-info' %>
+          <%= link_to 'Back', actors_path, class: 'btn btn-md btn-info' %>
+
+        <% if current_user && current_user.admin? %>
+
+          <%= link_to 'Edit', edit_actor_path(@actor),class: 'btn btn-md btn-warning'  %> 
+          <%= link_to 'Destroy', @actor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-md btn-danger'  %>
+
+        <% end %>
 
     </div>
   <div class="col"> </div>

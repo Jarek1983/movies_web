@@ -6,13 +6,27 @@
         <strong>Name:</strong>
           <%= @genre.name %>
       </p>
+
+      <p>
+        <strong>Description:</strong>
+          <%= @genre.description %>
+      </p>
+
+      <p>
+        <strong>Created at:</strong>
+          <%= @genre.created_at %>
+      </p>
+      <p>
+        <strong>Updated at:</strong>
+          <%= @genre.updated_at %>
+      </p>
   
-          <%= link_to 'Back', genres_path %>
+          <%= link_to 'Back', genres_path, class: 'btn btn-md btn-info'  %>
 
         <% if current_user && current_user.admin? %>
 
-          <%= link_to 'Edit', edit_genre_path(@genre) %> 
-          <%= link_to 'Destroy', @genre, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_genre_path(@genre), class: 'btn btn-md btn-warning' %> 
+          <%= link_to 'Destroy', @genre, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-md btn-danger'  %>
         <% end %>
 
     </div>
