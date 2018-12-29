@@ -45,7 +45,7 @@ private
   end
 
   def director_params
-    params.require(:director).permit(:name)
+    params.require(:director).permit(:name, :description)
   end
   
 end

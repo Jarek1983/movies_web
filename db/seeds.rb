@@ -25,18 +25,18 @@ Genre.new(name: 'thriller', description: 'Lorem ipsum dolor sit amet').save
 Genre.new(name: 'war', description: 'Lorem ipsum dolor sit amet').save
 Genre.new(name: 'western', description: 'Lorem ipsum dolor sit amet').save
 
-Director.new(name: 'Steven Spilberg').save
-Director.new(name: 'Alfred Hitckcock').save
-Director.new(name: 'Martin Scorsese').save
-Director.new(name: 'Ridley Scott').save
-Director.new(name: 'Quentin Tarantino').save
-Director.new(name: 'Francis Ford Copolla').save
-Director.new(name: 'Stanley Kubrick').save
-Director.new(name: 'George Lucas').save
-Director.new(name: 'Woody Allen').save
-Director.new(name: 'Mel Brooks').save
-Director.new(name: 'Mel Gibson').save
-Director.new(name: 'Daren Aronofsky').save
-Director.new(name: 'Wes Anderson').save
-Director.new(name: 'Peter Jackson').save
+Director.new(name: 'Steven Spilberg', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Alfred Hitckcock', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Martin Scorsese', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Ridley Scott', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Quentin Tarantino', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Francis Ford Copolla', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Stanley Kubrick', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'George Lucas', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Woody Allen', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Mel Brooks', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Mel Gibson', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Daren Aronofsky', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Wes Anderson', description: 'Lorem ipsum dolor sit amet').save
+Director.new(name: 'Peter Jackson', description: 'Lorem ipsum dolor sit amet').save
 

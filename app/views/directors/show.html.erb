@@ -6,13 +6,17 @@
         <strong>Name:</strong>
         <%= @director.name %>
       </p>
+      <p>
+        <strong>Description:</strong>
+          <%= @director.description %>
+      </p>
  
-      <%= link_to 'Back', directors_path %>
+      <%= link_to 'Back', directors_path, class: 'btn btn-md btn-info' %>
 
     <% if current_user && current_user.admin? %>
 
-      <%= link_to 'Edit', edit_director_path(@director) %>
-      <%= link_to 'Destroy', @director, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_director_path(@director), class: 'btn btn-md btn-warning' %>
+      <%= link_to 'Destroy', @director, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-md btn-danger' %>
 
     <% end %>
  

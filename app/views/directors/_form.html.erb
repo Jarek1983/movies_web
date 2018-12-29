@@ -1,13 +1,19 @@
 <%= render 'common/errors', model: @director %>
 
-<%= form_with(model: director, local: true) do |form| %>
+<%= form_with(model: director, local: true) do |f| %>
 
-  <div class="field">
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </div>
+  <div class="field" style="100%;">
+  	<p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: 'form-control' %>
+    </p>
+    <p>
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.submit class: 'btn btn-lg btn-success' %>
+    </p>
 
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>
