@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
 	  before_action :find_actor, only: [:show, :edit, :update, :destroy]
-    before_action :admin_authorize, except: [:index, :show, :search]
+    before_action :admin_authorize, except: [:index, :show]
 
   def index
   	@actors = Actor.all.order(:name)

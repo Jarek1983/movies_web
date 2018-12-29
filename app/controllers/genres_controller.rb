@@ -1,6 +1,6 @@
 class GenresController < ApplicationController
   before_action :set_genre, only: [:show, :edit, :update, :destroy]
-  before_action :admin_authorize, except: [:index, :show, :search]
+  before_action :admin_authorize
   
   def index
     @genres = Genre.all
