@@ -16,6 +16,9 @@ class Movie < ApplicationRecord
     has_many :actors_movies
     has_many :actors, through: :actors_movies
 
+    has_many :movies_screenwriters
+    has_many :screenwriters, through: :movies_screenwriters
+
     has_attached_file :movie, style:
       {
         medium: {geometry: "100x50", format: 'mp4'},

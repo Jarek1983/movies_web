@@ -30,8 +30,10 @@
             <% end %> 
         </p>
         <p>
-          <strong>Scenarist:</strong>
-            <%= @movie.scenarist %>
+          <strong>Screenwriters</strong>
+            <% @movie.screenwriters.each do |screenwriter| %>
+            <%= link_to screenwriter.name, screenwriter_path(screenwriter) %>
+            <% end %> 
         </p>
           <p>
           <strong>Actors</strong>

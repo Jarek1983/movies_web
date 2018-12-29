@@ -1,0 +1,25 @@
+<div class="row" style="padding-top: 30px;">
+  <div class="col"> </div>
+    <div class="col-md-10">
+
+      <p>
+        <strong>Name:</strong>
+        <%= @screenwriter.name %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+          <%= @screenwriter.description %>
+      </p>
+ 
+      <%= link_to 'Back', screenwriters_path, class: 'btn btn-md btn-info' %>
+
+    <% if current_user && current_user.admin? %>
+
+      <%= link_to 'Edit', edit_screenwriter_path(@screenwriter), class: 'btn btn-md btn-warning' %>
+      <%= link_to 'Destroy', @screenwriter, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-md btn-danger' %>
+
+    <% end %>
+ 
+  </div>
+  <div class="col"> </div>
+</div>

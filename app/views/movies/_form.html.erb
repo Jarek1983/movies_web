@@ -27,8 +27,8 @@
         <%= f.collection_check_boxes :director_ids, Director.all, :id, :name %>  
       </p>
       <p>
-        <%= f.label :scenarist %><br>
-        <%= f.text_field :scenarist, class: 'form-control' %>
+        <%= f.label :screenwriter %><br>
+        <%= f.collection_check_boxes :screenwriter_ids, Screenwriter.all, :id, :name %>  
       </p>
       <p>
         <%= f.label :actor %><br>

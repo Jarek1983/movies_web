@@ -54,6 +54,20 @@
 			    <% end %>
 			</tr>
 
+				<% @screenwriters.each do |screenwriter| %>
+			<tr>
+			  <td>
+				<%= screenwriter.name %>
+			  </td>
+			  <td>
+				<%= truncate(screenwriter.description, length: 75) %>
+			  </td>	
+			  <td>
+				<%= link_to 'Show', screenwriter_path(screenwriter), class: 'btn btn-sm btn-info' %>
+			  </td>
+			    <% end %>
+			</tr>
+
 		</table>
 			<p>
 				<%= link_to 'Back', movies_path, class: 'btn btn-sm btn-primary'  %>

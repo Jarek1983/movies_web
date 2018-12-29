@@ -40,3 +40,10 @@ Director.new(name: 'Daren Aronofsky', description: 'Lorem ipsum dolor sit amet')
 Director.new(name: 'Wes Anderson', description: 'Lorem ipsum dolor sit amet').save
 Director.new(name: 'Peter Jackson', description: 'Lorem ipsum dolor sit amet').save
 
+Screenwriter.new(name: 'Quentin Tarantino', description: 'Lorem ipsum dolor sit amet').save
+Screenwriter.new(name: 'Woody Allen', description: 'Lorem ipsum dolor sit amet').save
+Screenwriter.new(name: 'Billy Wilder', description: 'Lorem ipsum dolor sit amet').save
+Screenwriter.new(name: 'Oliver Stone', description: 'Lorem ipsum dolor sit amet').save
+Screenwriter.new(name: 'Francis Ford Copolla', description: 'Lorem ipsum dolor sit amet').save
+Screenwriter.new(name: 'Christopher Nolan', description: 'Lorem ipsum dolor sit amet').save
+
