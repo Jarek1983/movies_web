@@ -12,7 +12,7 @@ class Actor < ApplicationRecord
     has_many :movies, through: :actors_movies
 
   def self.search(params)
-		actors = Actor.where("name LIKE ? or surname LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+		actors = Actor.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
 		actors	
 	end
 end

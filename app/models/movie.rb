@@ -24,7 +24,7 @@ class Movie < ApplicationRecord
   validates_attachment_content_type :movie, content_type: /\Avideo\/.*\z/
 
   def self.search(params)
-		movies = Movie.where("description LIKE ? or name LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+		movies = Movie.where("name LIKE ?", "%#{params[:search]}%") if params[:search].present?
 		movies	
 	end
   
