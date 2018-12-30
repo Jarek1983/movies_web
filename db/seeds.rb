@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.new(userid: 'Rambo', email: 'snake@wp.pl').save
+# Actor.new(name: 'Arnold', user_id: 1).save
+# Movie.new(name: 'Rocky', user_id: 1).save
+# ActorsMovies.new(actor_id: 1, movie_id: 1).save
+
 Genre.new(name: 'action', description: 'Lorem ipsum dolor sit amet').save
 Genre.new(name: 'adventure', description: 'Lorem ipsum dolor sit amet').save
 Genre.new(name: 'animation', description: 'Lorem ipsum dolor sit amet').save
